@@ -1,0 +1,75 @@
+ATS Class:
+Attributes:
+jobPost: string
+cvProcessing: string
+candidateMatching: string
+userInterface: string
+dataManagement: string
+multilingualAccess: string
+reportingAndAnalysis: string
+
+ResumeBuilder Class:
+Attributes:
+cvCreation: string
+customization: string
+realTimePreview: string
+dataImport: string
+cvManagement: string
+pdfExport: string
+userAccountManagement: string
+userInterface: string
+security: string
+Relationships:
+
+ATS uses ResumeBuilder -> relation
+
+JobPost Class:
+Attributes:
+jobID: int
+title: string
+description: string
+requirements: list<string>
+postedDate: date
+
+Candidate Class:
+Attributes:
+candidateID: int
+name: string
+skills: list<string>
+experience: list<string>
+education: list<string>
+
+CV Class:
+Attributes:
+CVid: int
+format: string
+content: string
+
+Recruiter Class:
+Attributes:
+recruiterID: int
+name: string
+contactDetails: string
+
+MatchAlgorithm Class:
+Attributes:
+algorithmID: int
+criteria: list<string>
+matchPercentage: float
+
+User Class:
+Attributes:
+userID: int
+name: string
+email: string
+password: string
+
+AccountSettings Class:
+Attributes:
+settingsID: int
+privacySettings: string
+languagePreference: string
+Relationships:
+
+ATS is composed of JobPost, Candidate, CV, Recruiter, MatchAlgorithm
+ResumeBuilder is composed of User, AccountSettings
